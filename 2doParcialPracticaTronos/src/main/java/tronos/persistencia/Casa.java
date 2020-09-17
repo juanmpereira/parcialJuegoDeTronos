@@ -21,7 +21,8 @@ public class Casa {
 	private LocalDate anioFundacion;
 	
 	@ManyToOne
-	private Lugar lugar;
+	@JoinColumn(name="casa_lugar")
+	private Lugar lugarOrigen;
 	
 	@Enumerated(EnumType.ORDINAL)
 	@Column(name="fuerza_militar")
@@ -52,11 +53,11 @@ public class Casa {
 	}
 
 	public Lugar getLugar() {
-		return lugar;
+		return lugarOrigen;
 	}
 
 	public void setLugar(Lugar lugar) {
-		this.lugar = lugar;
+		this.lugarOrigen = lugar;
 	}
 
 	public FuerzaMilitar getFuerza() {

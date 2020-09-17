@@ -1,0 +1,6 @@
+2) Lo primero que deberia hacer es agregar un precalculado para poblacionTotal en donde cada vez que agrego un lugar
+a la bd modifico este valor. Asi me evito tener que hacer una query con join cada vez que quiero obtener la poblacion
+total de una region.
+Por otra parte tambien podria tener como precalculado si su casa principal es rica, en donde cada vez que seteo la 
+casa principal de una region, le pregunto a esta si es rica y se lo pongo como atributo a la tabla de region. 
+Me evita tener que hacer un join con casa para preguntarle si es rica.

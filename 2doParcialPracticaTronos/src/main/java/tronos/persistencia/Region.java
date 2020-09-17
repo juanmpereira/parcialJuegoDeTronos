@@ -15,9 +15,11 @@ public class Region {
 		String nombre;
 		
 		@ManyToOne
+		@JoinColumn(name="casa_principal")
 		private Casa casaPrincipal;
 		
-		@OneToMany
+		@ManyToMany
+		@JoinTable(name="lugar_por_region")
 		private List<Lugar> lugares;
 
 		public Long getId() {
